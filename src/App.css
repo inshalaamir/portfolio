@@ -1,38 +1,534 @@
-.App {
-  text-align: center;
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+:root{
+    --primary-white: #fff;
+    --primary-orange: #f9ab00;
+    --primary-dark: rgba(255,255,255,0);
+    --primary-red: #ef4035;
+    --primary-hover-red: #f33501;
+    --primary-grey: #F7F7F7;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+body{
+    font-family: "Roboto Condensed", sans-serif !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+/*--------------------NAVBAR--------------------*/
+
+nav{
+    z-index: 2;
+    
+}
+
+nav a.nav-link {
+   
+    cursor: pointer;
+}
+
+nav ul li {
+    text-transform: uppercase;
+}
+
+.navbar-brand{
+    color: var(--primary-orange) !important;
+}
+
+.navbar-nav > li > a {
+    margin-right: 0.75rem;
+    margin-left: 0.75rem;
+    color: var(--primary-white) !important;
+    border-top: 0.1875rem solid var(--primary-dark)
+}
+
+.navbar-nav > li > a.active, .navbar-nav > li > a.active:focus{
+    border-top: 0.1875rem solid var(--primary-orange);
+}
+
+.navbar-nav > li > a:hover{
+    border-top: 0.1875rem solid var(--primary-orange);
+}
+
+
+/*--------------------HEADER--------------------*/
+
+
+.header-wraper{
+    margin-top: 55px;
+    position: relative;
+    background: url(pexels-olia-danilevich-4974915.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+}
+
+.main-info{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Roboto Condensed" sans-serif;
+    z-index: 1;
+}
+
+.main-info h1{
+    color: var(--primary-orange);
+    text-transform: uppercase;
+    font-size: 5rem;
+    letter-spacing: 1rem;
+}
+
+.typed-text {
+    font-size: 2rem;
+    color: var(--primary-white);
+}
+
+.btn-main-offer{
+    border: 1px solid var(--primary-red);
+    text-transform: uppercase;
+    border-radius: 0%;
+    padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+    color: var(--primary-white);
+    margin: 2rem;
+}
+
+.tsparticles-canvas-el{
+    position: absolute;
+    height: 80% !important;
+    width: 100vw;
+    z-index: 1;
+}
+
+@media(max-width: 768px){
+    .particles-canvas{
+        display: none;
+    }
+    .main-info h1{
+        font-size: 2.5rem;
+        letter-spacing: 0.4rem;
+    }
+}
+
+
+
+
+/*--------------------ABOUT--------------------*/
+
+.about{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about__image{
+    width: 23rem;
+    height: 27rem;
+    object-fit: contain;
+    border-radius: 50% 50% 50% 50%;
+    
+}
+
+.about__text{
+    font-family:  "Roboto Condensed", sans-serif !important;
+    flex: 0.4;
+    vertical-align: middle;
+}
+
+.about__text > h1{
+    font-family:  "Roboto Condensed", sans-serif !important;
+  color: var(--primary-orange);
+  text-transform: uppercase;
+}
+
+@media(max-width: 1200px){
+    .about__image{
+        width: 300px;
+        height: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+   .about__info{
+       flex-direction: column;
+   }
+   .about__text{
+       margin-top: 3rem;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+   }
+   .about__text > h1{
+    margin-left:auto;
+    margin-right: auto;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+/*--------------------SKILLS--------------------*/
+
+.skills__wrapper{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.skills{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.stack{
+    display: flex;
+    flex-direction: column;
+    font-family:  "Roboto Condensed" sans-serif !important;
+    justify-content: center;
+}
+.stack > h1{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    color: var(--primary-orange);
+    text-transform: uppercase;
+}
+
+.stack__images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills__icon{
+    width: 8rem;
+    height: 8rem;
+    object-fit: contain;
+    border-radius: 50% 50% 50% 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.other{
+    
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    font-family:  "Roboto Condensed" sans-serif, !important;
+    justify-content: center;
+}
+
+.other > h1{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    color: var(--primary-orange);
+    text-transform: uppercase;
+}
+
+.other__images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media(max-width: 768px){
+    
+    .skills__wrapper{
+       margin-top: 7rem;
+       margin-bottom: 3rem;
+    }
+}
+
+/*--------------------PROJECTS--------------------*/
+
+.projects{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-grey);
+}
+
+.projects__container{
+    display: flex;
+    flex-direction: column;
+}
+
+.projects__container > h1{
+    color: var(--primary-orange);
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.projects__pictures{
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.projects__image{
+    width: 21rem;
+    height: 10.9rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border: 1px solid var(--primary-orange);
+    padding: 0.5rem;
+    transition: transform 300ms;
+    cursor: pointer;
+}
+
+.projects__image:hover{
+    transform: scale(1.09);
+    opacity: 1;
+}
+
+.ReactModal__Content--after-open{
+    
+    display: flex !important;
+    /* justify-content: center !important; */
+    flex-direction: column !important;
+    align-items: center !important;
+}
+.modal__title{
+    align-items: center;
+}
+
+.carousel-slider{
+    max-width: 1000px !important;
+}
+
+.carousel{
+    max-width: 1000px !important;
+}
+
+.modal__description{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.modal__footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modal__features{
+    margin-top: 2rem;
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start !important;
+}
+
+.modal__features > h3{
+    color: var(--primary-orange);
+}
+
+.modal__link{
+    margin-top: 2rem;
+}
+
+
+
+@media(max-width: 1400px){
+    .carousel-slider{
+        max-width: 700px !important;
+    }
+    
+    .carousel{
+        max-width: 700px !important;
+    }
+    .projects__image{
+        width: 17rem;
+        height: 9rem;
+    }
+}
+
+@media(max-width: 768px){
+    .modal__footer{
+        flex-direction: column;
+    }
+}
+
+/*--------------------REVIEWS--------------------*/
+
+.reviews__wrapper{
+    position: relative;
+    background: url(building.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.reviews__info{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Roboto Condensed" sans-serif;
+}
+
+.reviews__info h1{
+    color: var(--primary-orange);
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+.carousel{
+    background-color: rgba(12, 12, 12, 0.5)
+}
+
+
+.carousel__container > h4{
+    color: var(--primary-orange) !important;
+}
+
+.carousel__container > p{
+    color: var(--primary-white) !important;
+}
+
+.carousel__container{
+    padding: 3rem 3rem;
+}
+.reviews__img{
+    width: 120px !important;
+    height: 120px;
+}
+.reviews__mobile{
+    display: none;
+}
+
+
+@media(max-width: 768px){
+    
+    .reviews__carousel{
+        display: none;
+    }
+    .reviews__mobile{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .reviews__img{
+        width: 40px !important;
+        height: 40px !important;
+    }
+}
+
+/*--------------------CONTACT--------------------*/
+
+.contact{
+    background-color: #212529;
+    
+}
+
+.contact__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.contact__wrapper > h1{
+    color: var(--primary-orange);
+    text-transform: uppercase;
+    
+}
+
+.contact__wrapper > h6{
+    color: var(--primary-white);
+    text-transform: uppercase;
+    text-align: center;
+}
+.contact__input{
+    background-color: #212529;
+    border:none;
+    border-bottom: 2px solid grey;
+    transition: 0.5s ease-in;
+    margin-top: 1rem;
+}
+
+.contact__input:focus{
+    outline: none;
+    border-bottom: 2px solid var(--primary-orange);
+}
+
+.form__wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.form__creds{
+    display: flex;
+    flex-direction: column;
+    flex: 0.5;
+    margin-right: 1rem;
+}
+.form__message{
+    display: flex;
+    flex: 0.5;
+    margin-left: 1rem;
+}
+
+.contact__text{
+    width: 100%
+}
+
+.contact__or{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.contact__or > h5{
+    color: var(--primary-orange);
+}
+
+@media(max-width: 768px){
+    
+    .form__wrapper{
+        flex-direction: column;
+    }
+    .form__creds{
+        margin-right: 0rem;
+    }
+    .form__message{
+        margin-left: 0rem;
+    }
 }
